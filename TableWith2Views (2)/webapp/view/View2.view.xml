@@ -1,0 +1,46 @@
+<mvc:View controllerName="TableTask.controller.View2"
+xmlns:core="sap.ui.core" 
+xmlns:html="http://www.w3.org/1999/xhtml" 
+xmlns:t="sap.ui.table"
+xmlns:mvc="sap.ui.core.mvc"
+displayBlock="true" xmlns="sap.m">
+	<App id="idView2">
+		<pages>
+			<Page  showNavButton="true" navButtonPress="onBack">
+			<headerContent>
+	        	 <Button icon="sap-icon://delete" press="MultipleDelete"></Button>
+	        </headerContent>
+				<content>
+					<t:Table id="table2" rows="{/RemovedProducts}" rowSelectionChange="onRowSelect" cellClick="onClick" visibleRowCount="4" selectionMode="MultiToggle">
+						<t:columns>
+							<t:Column> 
+								<Label text="Product_ID"/>
+								<t:template>
+									<Text text="{product_id}" />
+								</t:template>
+							</t:Column>
+							<t:Column>
+								<Label text="Product_Name"/>
+								<t:template>
+									<Text text="{product_name}"/>
+								</t:template>
+							</t:Column>
+							<t:Column>
+								<Label text="Prouct_Price"/>
+								<t:template>
+									<Text text="{product_price}"/>
+								</t:template>
+							</t:Column>
+							<t:Column>
+								<Label text="Product_Suppliers"/>
+								<t:template>
+									<Text text="{product_supplier}"/>
+								</t:template>
+							</t:Column>
+						</t:columns>
+					</t:Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
