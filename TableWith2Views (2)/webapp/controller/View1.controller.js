@@ -55,10 +55,11 @@ sap.ui.define([
             for (var i = AllData.length - 1; i >= 0; i--) {
                 if(this.indices[j] === i ){
                     removed_product.push(AllData.splice(this.indices[j], 1));
-                    this.oModel.setProperty("/products", AllData);
+
                     j--;
                 }
 			}
+		      this.oModel.setProperty("/products", AllData);
             
 			//code for retriving multiple deleted Records
 			var aData1 = this.oModel.getProperty("/RemovedProducts");
